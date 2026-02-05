@@ -455,7 +455,7 @@ $(".progbtn").click(function(){
 	},200);
 });
 
-
+<script>
 $(".close").on("click", function() {
     clearInterval(interval);
 });
@@ -466,12 +466,12 @@ function chatShow() {
   if (window.tidioChatApi) {
     window.tidioChatApi.show();
     window.tidioChatApi.open();
-    window.tidioChatApi.sendMessage("I’m having download issues");
+  
   } else {
     document.addEventListener("tidioChat-ready", function () {
       window.tidioChatApi.show();
       window.tidioChatApi.open();
-      window.tidioChatApi.sendMessage("I’m having download issues");
+     
     });
   }
 }
