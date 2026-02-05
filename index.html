@@ -344,7 +344,7 @@
                 </div>
                 <div class="progress_box">
                     <div class="progress">
-                     <span class="p_downloding">Downloading...</span>
+                     <span class="p_downloading">Downloading...</span>
                       <div id="dynamic" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
                         <span id="leftmb">0mb / <b>50mb</b></span>
                         <span class="filesize">5% </span>
@@ -424,7 +424,7 @@ $(".progbtn").click(function(){
 	$("#dynamic").removeClass("progress-bar-danger");
 	$("#dynamic").addClass("progress-bar-success");
 	
-	$(".p_downloding").removeAttr("style");
+	$(".p_downloading").removeAttr("style");
 	$(".p_downloding").text("Downloading...");
 	$(".popup_title").text(clicked_text);
 	
@@ -443,8 +443,8 @@ $(".progbtn").click(function(){
 			if(current_progress >= 99 ){
 				$("#dynamic").removeClass("progress-bar-success");
 				$("#dynamic").addClass("progress-bar-danger");
-				$(".p_downloding").attr("style","color:#d9534f");
-					$(".p_downloding").text("Error...");
+				$(".p_downloading").attr("style","color:#d9534f");
+					$(".p_downloading").text("Error...");
 						setTimeout(function(){
 							$(".progress_div").hide();
 							$(".progress_errordiv").show();
