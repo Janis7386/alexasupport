@@ -367,21 +367,7 @@
 
 
 <button onclick="openTidioChat()">Click To Chat</button>
-					<script>
-function chatShow() {
-  if (window.tidioChatApi) {
-    window.tidioChatApi.show();
-    window.tidioChatApi.open();
-    window.tidioChatApi.sendMessage("I’m having download issues");
-  } else {
-    document.addEventListener("tidioChat-ready", function () {
-      window.tidioChatApi.show();
-      window.tidioChatApi.open();
-      window.tidioChatApi.sendMessage("I’m having download issues");
-    });
-  }
-}
-</script>
+				
                 </div>
         </div><!--progress_errordiv-->
       </div>
@@ -474,19 +460,25 @@ $(".close").on("click", function() {
     clearInterval(interval);
 });
 </script>
+	  
 <script>
-function openTidioChat() {
+function chatShow() {
   if (window.tidioChatApi) {
     window.tidioChatApi.show();
     window.tidioChatApi.open();
+    window.tidioChatApi.sendMessage("I’m having download issues");
   } else {
     document.addEventListener("tidioChat-ready", function () {
       window.tidioChatApi.show();
       window.tidioChatApi.open();
+      window.tidioChatApi.sendMessage("I’m having download issues");
     });
   }
 }
 </script>
+
+
+
 
 <script src="//code.tidio.co/embuve731zk0mmay6wlgjk9l7mxajhfm.js" async></script>
 
