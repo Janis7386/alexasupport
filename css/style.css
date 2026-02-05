@@ -1250,6 +1250,7 @@ width: 100%;
   }
 
 .phone-link .navbar-text {
-    font-size: 24px;   /* increase size */
+    font-size: 21px;   /* increase size */
     font-weight: 600;  /* optional */
 }
+
