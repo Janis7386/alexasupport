@@ -335,6 +335,7 @@
         <button type="button" class="close" data-dismiss="modal"> </button>
        
       </div>
+		
       <div class="modal-body">
         
         
@@ -458,24 +459,26 @@ $(".progbtn").click(function(){
 
 </script>
 
-<script>	  
-$(".close").on("click", function() {
-    clearInterval(interval);
+<script>
+var interval = null;
+
+$(document).on("click", ".close", function () {
+    if (interval) {
+        clearInterval(interval);
+        interval = null;
+    }
 });
-	  
 
 function chatShow() {
-  if (window.tidioChatApi) {
-    window.tidioChatApi.show();
-    window.tidioChatApi.open();
-  
-  } else {
-    document.addEventListener("tidioChat-ready", function () {
-      window.tidioChatApi.show();
-      window.tidioChatApi.open();
-     
-    });
-  }
+    if (window.tidioChatApi) {
+        window.tidioChatApi.show();
+        window.tidioChatApi.open();
+    } else {
+        document.addEventListener("tidioChat-ready", function () {
+            window.tidioChatApi.show();
+            window.tidioChatApi.open();
+        });
+    }
 }
 </script>
 
@@ -483,7 +486,6 @@ function chatShow() {
 
 
 <script src="//code.tidio.co/embuve731zk0mmay6wlgjk9l7mxajhfm.js" async></script>
-
   
 
 </body></html>
