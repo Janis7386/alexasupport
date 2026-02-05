@@ -1250,7 +1250,10 @@ width: 100%;
   }
 
 .phone-link .navbar-text {
-    font-size: 21px;   /* increase size */
+    font-size: 24px;   /* increase size */
     font-weight: 600;  /* optional */
 }
 
+.phone-link .navbar-text {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
